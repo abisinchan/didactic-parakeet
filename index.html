@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./css/styles.css">
 
   <title>See Bully Camp</title>
 </head>
@@ -16,7 +16,9 @@
     <nav class="navbar">
 
       <div class="logoContainer">
-        <span class="logo">See Bully Camp</span>
+        <span class="logo">
+          <a href="./index.html">See Bully Camp</a>
+        </span>
       </div>
 
       <div class="container-fluid">
@@ -26,11 +28,11 @@
           </li>
           <li class="nav-item dropdown">
             <div class="dropdown">
-              <a class="nav-link" href="#">Our Bullies</a>
+              <a class="nav-link" href="./doggies.html">Our Bullies</a>
               <div class="dropdown-content">
-                <a href="#">Sires</a>
-                <a href="#">Dam</a>
-                <a href="#">Available Pups</a>
+                <a href="./doggies.html#siresPage">Sires</a>
+                <a href="./doggies.html#damsPage">Dam</a>
+                <a href="./doggies.html#pupsPage">Available Pups</a>
               </div>
             </div>
           </li>
@@ -55,15 +57,28 @@
 
   <main>
       <div class="homeContainer">
-          <div id="about">
-            <div class="aboutUs">
-              <h3>About Us:</h3>
-              <img src="https://fakeimg.pl/300x200" alt="placeholder">
-            </div>
 
-            <div class="missionStatement">
-              <p>At See Bully Camp, founded by Tony See, our mission is to breed top-quality Exotic Bullies with a strong focus on health, temperament, and breed standards. We are dedicated to responsible breeding practices, education, and ensuring the well-being of our dogs and their future families. Our goal is to elevate the Exotic Bully breed while promoting ethical ownership.</p>
+          <div id="about">
+
+              <h3>About Us:</h3>  
+            
+        
+
+            <div class="aboutUs">
+
+              <div class="imgContainer">
+              
+         
+                <img src="https://fakeimg.pl/300x200" alt="placeholder">
+              </div>
+  
+              <div class="missionStatement">
+                <p>At See Bully Camp, founded by Tony See, our mission is to breed top-quality Exotic Bullies with a strong focus on health, temperament, and breed standards. We are dedicated to responsible breeding practices, education, and ensuring the well-being of our dogs and their future families. Our goal is to elevate the Exotic Bully breed while promoting ethical ownership.</p>
+              </div>
+
             </div>
+           
+
 
           </div>
 
@@ -71,6 +86,23 @@
 
           <div id="contact">
             <h3>Request Contact:</h3>
+            <form action="process_form.php" method="post">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+      
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+      
+              <label for="phone">Phone Number:</label>
+              <input type="tel" id="phone" name="phone" required>
+      
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+      
+              <input type="submit" value="Submit">
+          </form>
+      
+      
           </div>
 
       </div>

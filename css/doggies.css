@@ -1,0 +1,102 @@
+/*  think of it as a way to start with a clean slate for your webpage's layout, so you have more control over how everything looks and fits together */
+*{
+margin: 0; /* makes sure there's no extra space outside an element. */
+padding: 0;/* ensures there's no extra space inside an element */
+box-sizing: border-box;/* makes it easier to control the size of elements by including padding and borders in their total size, so you don't have to worry about them adding extra space */
+}
+
+/* Header/ Navigation styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    z-index: 1000; /* Adjust the z-index to ensure it's above other content */
+  }
+  
+
+  .logo {
+    padding-left: 20px;
+    font-size: 3vw;
+  }
+
+  .logo a{
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    list-style: none;
+    margin: 0; /* Remove default margin to prevent spacing issues */
+    padding: 0; /* Remove default padding */
+  }
+
+  .navbar ul li {
+    position: relative;
+  }
+
+  .navbar ul li a {
+    text-decoration: none;
+    padding: 15px;
+    font-size: 1.2rem;
+    color: #fff;
+    transition: background-color 0.3s;
+  }
+
+  /* Dropdown styles */
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #444; /* Change the background color on hover */
+  }
+
+.container{
+    scroll-snap-type: y mandatory ;
+    overflow-y: scroll;
+    height: 100vh;
+}
+section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+.one{
+    background-color: aqua;
+}
+.two{
+    background-color: rgb(197, 52, 71);
+}
+.three{
+    background-color: rgb(180, 230, 64);
+}
