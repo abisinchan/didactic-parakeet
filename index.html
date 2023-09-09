@@ -86,7 +86,7 @@
 
           <div id="contact">
             <h3>Request Contact:</h3>
-            <form action="process_form.php" method="post">
+            <form action="process_form.php" method="post" id="contactForm">
               <label for="name">Name:</label>
               <input type="text" id="name" name="name" required>
       
@@ -122,6 +122,23 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-  <script src="./index.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const contactForm = document.getElementById('contactForm');
+      
+      contactForm.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the default form submission
+        
+        // Display the alert message
+        alert('This form is for demo purposes only. For email inquiries, please contact tonysee91@gmail.com.');
+        
+        // Optional: You can reset the form after displaying the alert
+        contactForm.reset();
+      });
+    });
+  </script>
+  
+  
 </body>
 </html>

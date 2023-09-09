@@ -1,5 +1,5 @@
 /* universal */
-/* universal */
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Playfair+Display&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +12,7 @@ body {
   flex-direction: column;
   font-size: 16px;
   min-height: 100vh; /* Ensure the container takes up at least the full viewport height */
+  font-family: 'Playfair Display', serif;
 }
 h1{
   font-size: 2rem;
@@ -36,12 +37,13 @@ h2, h3, p, button {
 
 .logo {
   padding-left: 20px;
-
+  font-family: 'Black Ops One', Georgia, 'Times New Roman', Times, serif;
 }
 
 .logo a {
   text-decoration: none;
-  color: #fff;
+  color: #007bff;
+  text-shadow: 1px 1px 2px #fff;
   font-size: 3vw;
 }
 
@@ -69,6 +71,9 @@ h2, h3, p, button {
   color: #fff;
   transition: background-color 0.3s;
   font-size: 2.5vw;
+}
+.navbar ul li a:hover {
+  color: #007bff;
 }
 
 /* Dropdown styles */
@@ -182,6 +187,7 @@ text-align: left;
 button a {
   text-decoration: none;
   color: #fff; /* Set the link color */
+  font-family: 'Playfair Display', serif;
 }
 
 /* Button hover styles */
