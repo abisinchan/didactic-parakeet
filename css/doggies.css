@@ -1,48 +1,62 @@
 /* universal */
-body {
+/* universal */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-size: 16px;
+ 
 }
-h1, h2, h3, p, button {
+body {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  min-height: 100vh; /* Ensure the container takes up at least the full viewport height */
+}
+h1{
+  font-size: 2rem;
+  margin-top: 10px;
+}
+h2, h3, p, button {
   font-size: 1rem; /* Use relative font size */
 }
 
 /* Header/ Navigation styles */
 .navbar {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #333;
   color: #fff;
   padding: 10px;
-  z-index: 1000; /* Adjust the z-index to ensure it's above other content */
+  z-index: 1000;
+  /* Adjust the z-index to ensure it's above other content */
 }
 
 
 .logo {
   padding-left: 20px;
-  font-size: 3vw;
 
 }
 
-.logo a{
+.logo a {
   text-decoration: none;
   color: #fff;
+  font-size: 3vw;
 }
-header{
-  width: 100%;
-}
+
 .navbar ul {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   list-style: none;
-  margin: 0; /* Remove default margin to prevent spacing issues */
-  padding: 0; /* Remove default padding */
+  margin: 0;
+  /* Remove default margin to prevent spacing issues */
+  padding: 0;
+  /* Remove default padding */
+  width: 100%;
+  /* Set the width to 100% to span the full width */
 }
 
 .navbar ul li {
@@ -52,9 +66,9 @@ header{
 .navbar ul li a {
   text-decoration: none;
   padding: 15px;
-  font-size: 1.2rem;
   color: #fff;
   transition: background-color 0.3s;
+  font-size: 2.5vw;
 }
 
 /* Dropdown styles */
@@ -67,8 +81,9 @@ header{
   position: absolute;
   background-color: #333;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  
 }
 
 .dropdown:hover .dropdown-content {
@@ -80,11 +95,15 @@ header{
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+
 }
 
 .dropdown-content a:hover {
-  background-color: #444; /* Change the background color on hover */
+  background-color: #444;
+  /* Change the background color on hover */
 }
+
+
 
 /* main  */
 main{
@@ -93,6 +112,9 @@ align-items: center;
 justify-content: center;
 flex-direction: column;
 width: 100%;
+margin-bottom: 20px;
+flex-grow: 1;
+margin-bottom: auto; /* Push the footer to the bottom */
 
 }
 
@@ -104,8 +126,8 @@ section{
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  column-gap: 5px;
-  margin-bottom: 30px;;
+  margin-bottom: 30px;
+  width: 100%;
 }
 
 .siresCards, .damsCards, .pupsCards{
@@ -120,18 +142,25 @@ section{
  justify-content: center;
  align-items: center;
  flex-direction: column;
+ padding: 50px;
+
 }
 
 .card p{
 text-align: left;
  }
 
+ .cardImgContainer{
+  width: 200px;
+  height: 200px;
+  margin-bottom: 15px;
+ }
+
  img{
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 100%;
+  max-height: 100%;
   border-radius: 20%;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-  margin-bottom: 15px;
  }
 
  span{
@@ -197,24 +226,73 @@ footer ul a:hover {
 }
 
 
-@media (max-width: 768px) {
-  .navbar ul {
-    flex-direction: column; /* Stack navigation links vertically */
-  }
+/* media queries */
 
-  /* Adjust font size or padding as needed */
-  .navbar ul li a {
-    font-size: 1rem;
-    padding: 10px;
+@media only screen and (max-width: 1200px){
+  .card{
+    padding: 25px;
   }
-
-  /* Make images responsive */
-  img {
-    max-width: 100%; /* Ensure images don't overflow their containers */
-    height: auto; /* Maintain aspect ratio */
   }
+  
+  @media only screen and (max-width: 1008px){
+    .card{
+      padding: 10px;
+    }
+    }
 
+@media (max-width: 889px) {
+  .siresCards, .damsCards, .pupsCards {
+    flex-wrap: wrap;
+  }
+  
   .card {
-    width: calc(100% - 20px); /* Single card per row on smaller screens */
+  flex-basis: calc(50% - 20px); /* Adjust the percentage and margin as needed */
+   padding: 10px;
+ 
+ 
   }
 }
+
+@media (max-width: 508px) {
+.card-body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column ;
+}
+}
+@media only screen and (max-width: 425px){
+  .navbar {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .logo {
+    padding: 20px;
+  
+  }
+  .logo a{
+    font-size: 5vw;
+  
+  }
+  
+  .navbar ul {
+    flex-direction: column;
+  }
+  
+  .navbar ul li a {
+    font-size: 4vw;
+}
+h3{
+  font-size: 1.5rem;
+}
+
+
+
+.missionStatement p {
+  font-size: 1rem;
+}
+}
+
